@@ -1,0 +1,49 @@
+{
+  "name": "lab1",
+  "version": "0.9.0",
+  "description": "jquery",
+  "main": "main.js",
+  "scripts": {
+    "test": "react-scripts test",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dyshechka/lab1-js.git"
+  },
+  "keywords": [
+    "lab1"
+  ],
+  "author": "Martha Kharitonova",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dyshechka/lab1-js/issues"
+  },
+  "homepage": "https://github.com/dyshechka/lab1-js#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^4.0.0-alpha.6",
+    "font-awesome": "^4.7.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-fontawesome": "^1.6.1",
+    "react-redux": "^5.0.5",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.5.2",
+    "url-loader": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "style-loader": "^0.18.2",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "node-sass": "^4.5.3",
+    "react-scripts": "^1.0.2",
+    "sass-loader": "^6.0.6",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  }
+}
