@@ -14,7 +14,7 @@ const todos = (state = [], action) => {
             ];
         case 'UPDATE_TODO':
             return state.map(todo => {
-                if (todo.text === action.todo.text) {
+                if (todo.attributes.text === action.todo.attributes.text) {
                     return Object.assign({}, action.todo);
                 } else {
                     return todo;

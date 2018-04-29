@@ -17,22 +17,22 @@ class TodoForm extends Component {
     reloadTodos() {
         this.props.startLoading();
         todoService.getAll().then(result => {
-            this.props.onLoadTodo(result.data);
+            this.props.onLoadTodo(result.data.data);
             this.props.endLoading();
         });
     }
 
     completeTodo(todo) {
         this.props.startLoading();
-        const beginTime= todo.time.getTime();
+        const beginTime= new Date(todo.attributes.time);
         const endTime = new Date().getTime();
         const result = (endTime - beginTime) / 1000;
-        todo = Object.assign({}, todo, {
-            done: 1,
-            estimated: `${result} sec`
-        });
-        todoService.update(todo).then(result => {
-            this.props.onUpdateTodo(result.data);
+        let data = {
+          id: todo.id,
+          estimated: `${result} sec`
+        }
+        todoService.update(data).then(result => {
+            this.props.onUpdateTodo(result.data.data);
             this.props.endLoading();
         });
     }
@@ -52,7 +52,7 @@ class TodoForm extends Component {
                     <div className="col div-width">
                         {this.props.todos.map( todo =>
                             <TodoItem
-                                key={todo.text}
+                                key={todo.id}
                                 todo={todo}
                                 onComplete={(todo) => this.completeTodo(todo)}
                             />

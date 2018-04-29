@@ -18,7 +18,7 @@ class AddTodoForm extends Component {
             done: 0
         };
         todoService.create(todo).then(result => {
-            this.props.onAddTodo(result.data);
+            this.props.onAddTodo(result.data.data);
             this.props.endLoading();
         });
     }
